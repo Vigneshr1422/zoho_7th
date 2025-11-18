@@ -7,22 +7,20 @@ public class rotate_90degree {
                 {4,5,6},
                 {7,8,9}
         };
-        System.out.println("Before ");
-        printMatrix(arr);
-        rotate90degree(arr);
-        System.out.println("below  is transpose");
+
+        System.out.println("Before:");
         printMatrix(arr);
 
+        rotate90degree(arr);
+
+        System.out.println("After 90-degree clockwise:");
+        printMatrix(arr);
     }
 
     public static void rotate90degree(int [][]arr)
     {
         transpose(arr);
-        System.out.println("below  is transpose");
-        printMatrix(arr);
-        System.out.println("Below is Reverse");
-        reverse(arr);
-        printMatrix(arr);
+        Row_reverse(arr);
     }
 
     public static void transpose(int [][]arr)
@@ -32,7 +30,7 @@ public class rotate_90degree {
 
         for(int i=0;i<n;i++)
         {
-            for(int j=i;j<m;j++)
+            for(int j=i+1;j<m;j++)
             {
                 int t=arr[i][j];
                 arr[i][j]=arr[j][i];
@@ -41,7 +39,7 @@ public class rotate_90degree {
         }
     }
 
-    public static void reverse(int [][]arr)
+    public static void Row_reverse(int [][]arr)
     {
         int n=arr.length;
         int m=arr[0].length;
@@ -52,7 +50,7 @@ public class rotate_90degree {
             {
                 int t=arr[i][j];
                 arr[i][j]=arr[i][m-j-1];
-                arr[i][n-j-1]=t;
+                arr[i][m-j-1]=t;
             }
         }
     }

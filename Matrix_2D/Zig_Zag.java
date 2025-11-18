@@ -1,5 +1,21 @@
 package Matrix_2D;
+/*
+-------diagonal matrix-----------
+            1
+            2 4
+            3 5 7
+            6 8
+            9
+above is diagonal matrix
+-------Zig zag matrix-----------
+            1
+            2 4
+            7 5 3
+            6 8
+            9
+above is Zig zag matrix
 
+ */
 public class Zig_Zag {
     public static void main(String[] args) {
         int [][]arr={

@@ -1,0 +1,184 @@
+ZohoLowLevelDesign.Console Demo: Banking Application
+===== Welcome to Zoho Bank =====
+1. Login
+2. Add New Customer
+3. Top N Customers
+4. Quit
+Enter choice: 2
+
+
+User Input:
+
+Enter Name: Sita
+Enter Password: Sita@123
+Re-type Password: Sita@123
+
+
+Program Output:
+
+Customer added successfully!
+Customer ID: 55
+Account Number: 55055
+Initial Balance: 10000
+
+===== Welcome to Zoho Bank =====
+1. Login
+2. Add New Customer
+3. Top N Customers
+4. Quit
+Enter choice: 1
+
+
+User Input (Login):
+
+Enter Customer ID: 55
+Enter Password: Sita@123
+
+
+Program Output:
+
+Login Successful! Welcome Sita
+
+===== Sita's Account =====
+1. ATM Withdrawal
+2. Cash Deposit
+3. Transfer
+4. Transaction History
+5. Change Password
+6. Logout
+Enter choice: 2
+
+
+User Input (Deposit):
+
+Enter amount to deposit: 5000
+
+
+Program Output:
+
+Deposit successful!
+New Balance: 15000
+Transaction ID: 2
+
+===== Sita's Account =====
+1. ATM Withdrawal
+2. Cash Deposit
+3. Transfer
+4. Transaction History
+5. Change Password
+6. Logout
+Enter choice: 1
+
+
+User Input (ATM Withdrawal):
+
+Enter amount to withdraw: 6000
+
+
+Program Output:
+
+Withdrawal successful!
+New Balance: 9000
+Transaction ID: 3
+
+===== Sita's Account =====
+1. ATM Withdrawal
+2. Cash Deposit
+3. Transfer
+4. Transaction History
+5. Change Password
+6. Logout
+Enter choice: 3
+
+
+User Input (Transfer):
+
+Enter beneficiary account number: 22022
+Enter amount to transfer: 7000
+
+
+Program Output:
+
+Transfer successful!
+Operational Fee applied: 10
+New Balance: 1990
+Transaction ID: 4
+
+Beneficiary Account Updated Successfully
+
+===== Sita's Account =====
+1. ATM Withdrawal
+2. Cash Deposit
+3. Transfer
+4. Transaction History
+5. Change Password
+6. Logout
+Enter choice: 4
+
+
+Program Output (Transaction History):
+
+Account Statement
+Name: Sita
+Account No: 55055
+Customer ID: 55
+
+TransID   TransType        Amount   Balance
+1         Opening          10000    10000
+2         CashDeposit      5000     15000
+3         ATMWithdrawal    6000     9000
+4         TransferTo 22022 7000    1990
+
+===== Sita's Account =====
+1. ATM Withdrawal
+2. Cash Deposit
+3. Transfer
+4. Transaction History
+5. Change Password
+6. Logout
+Enter choice: 5
+
+
+User Input (Change Password):
+
+Enter current password: Sita@123
+Enter new password: Sita@456
+Re-type new password: Sita@456
+
+
+Program Output:
+
+Password changed successfully!
+
+===== Sita's Account =====
+1. ATM Withdrawal
+2. Cash Deposit
+3. Transfer
+4. Transaction History
+5. Change Password
+6. Logout
+Enter choice: 6
+
+
+Program Output:
+
+Logged out successfully!
+
+===== Welcome to Zoho Bank =====
+1. Login
+2. Add New Customer
+3. Top N Customers
+4. Quit
+Enter choice: 3
+
+
+User Input:
+
+Enter N: 3
+
+
+Program Output (Top 3 Customers by Balance):
+
+1. Robin - 40000
+2. Rahul - 30000
+3. Madhu - 26000

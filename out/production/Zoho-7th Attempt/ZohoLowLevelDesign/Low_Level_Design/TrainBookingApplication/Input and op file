@@ -1,0 +1,153 @@
+"C:\Program Files\Java\jdk-17\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\lib\idea_rt.jar=64914:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin" -Dfile.encoding=UTF-8 -classpath "D:\Zoho-7th Attempt\out\production\Zoho-7th Attempt" ZohoLowLevelDesign.Low_Level_Design.TrainBookingApplication.Main
+ Train Booking System (A → B → C → D → E)
+ Commands:
+ book,<SRC>,<DST>,<COUNT>
+ cancel,<PNR>,<COUNT>
+ chart
+ exit
+-------------------------------------------
+
+Enter command: book,a,e,8
+PNR 1 booked: Confirmed [1, 2, 3, 4, 5, 6, 7, 8]
+
+Enter command: book,a,e,2
+PNR 2 booked with 2 WL passengers (no confirmed).
+
+Enter command: cancel,1,5
+Cancelled 5 passenger(s) from PNR 1. Active now: 3
+Promoted WL -> confirmed: PNR 2 seat 4
+Promoted WL -> confirmed: PNR 2 seat 5
+
+Enter command: chart
+========== BOOKING SUMMARY ==========
+PNR 1 : A → E | Seats: [1, 2, 3] | Status: Confirmed
+PNR 2 : A → E | Seats: [4, 5] | Status: Confirmed
+=====================================
+
+Seat Chart:
+Seat | A | B | C | D | E
+-----+---+---+---+---+---
+1   | * | * | * | * | * |
+2   | * | * | * | * | * |
+3   | * | * | * | * | * |
+4   | * | * | * | * | * |
+5   | * | * | * | * | * |
+6   |   |   |   |   |   |
+7   |   |   |   |   |   |
+8   |   |   |   |   |   |
+
+Enter command: cancel,1,3
+Cancelled 3 passenger(s) from PNR 1. Active now: 0
+
+Enter command: cancel,2,2
+Cancelled 2 passenger(s) from PNR 2. Active now: 0
+
+Enter command: book,a,c,8
+PNR 3 booked: Confirmed [1, 2, 3, 4, 5, 6, 7, 8]
+
+Enter command: book,c,e,8
+PNR 4 booked: Confirmed [1, 2, 3, 4, 5, 6, 7, 8]
+
+Enter command: book,a,e,2
+PNR 5 booked with 2 WL passengers (no confirmed).
+
+Enter command: chart
+========== BOOKING SUMMARY ==========
+PNR 1 : A → E | Seats: - | Status: Cancelled
+PNR 2 : A → E | Seats: - | Status: Cancelled
+PNR 3 : A → C | Seats: [1, 2, 3, 4, 5, 6, 7, 8] | Status: Confirmed
+PNR 4 : C → E | Seats: [1, 2, 3, 4, 5, 6, 7, 8] | Status: Confirmed
+PNR 5 : A → E | Seats: - | Status: Waiting
+=====================================
+
+Seat Chart:
+Seat | A | B | C | D | E
+-----+---+---+---+---+---
+1   | * | * | * | * | * |
+2   | * | * | * | * | * |
+3   | * | * | * | * | * |
+4   | * | * | * | * | * |
+5   | * | * | * | * | * |
+6   | * | * | * | * | * |
+7   | * | * | * | * | * |
+8   | * | * | * | * | * |
+
+Enter command: book,c,d,2
+Booking failed: not enough confirmed+WL slots available.
+
+Enter command: cancel,3,8
+Cancelled 8 passenger(s) from PNR 3. Active now: 0
+
+Enter command: chart
+========== BOOKING SUMMARY ==========
+PNR 1 : A → E | Seats: - | Status: Cancelled
+PNR 2 : A → E | Seats: - | Status: Cancelled
+PNR 3 : A → C | Seats: - | Status: Cancelled
+PNR 4 : C → E | Seats: [1, 2, 3, 4, 5, 6, 7, 8] | Status: Confirmed
+PNR 5 : A → E | Seats: - | Status: Waiting
+=====================================
+
+Seat Chart:
+Seat | A | B | C | D | E
+-----+---+---+---+---+---
+1   |   |   | * | * | * |
+2   |   |   | * | * | * |
+3   |   |   | * | * | * |
+4   |   |   | * | * | * |
+5   |   |   | * | * | * |
+6   |   |   | * | * | * |
+7   |   |   | * | * | * |
+8   |   |   | * | * | * |
+
+Enter command: cancel,4,8
+Cancelled 8 passenger(s) from PNR 4. Active now: 0
+Promoted WL -> confirmed: PNR 5 seat 1
+Promoted WL -> confirmed: PNR 5 seat 2
+
+Enter command: chart
+========== BOOKING SUMMARY ==========
+PNR 1 : A → E | Seats: - | Status: Cancelled
+PNR 2 : A → E | Seats: - | Status: Cancelled
+PNR 3 : A → C | Seats: - | Status: Cancelled
+PNR 4 : C → E | Seats: - | Status: Cancelled
+PNR 5 : A → E | Seats: [1, 2] | Status: Confirmed
+=====================================
+
+Seat Chart:
+Seat | A | B | C | D | E
+-----+---+---+---+---+---
+1   | * | * | * | * | * |
+2   | * | * | * | * | * |
+3   |   |   |   |   |   |
+4   |   |   |   |   |   |
+5   |   |   |   |   |   |
+6   |   |   |   |   |   |
+7   |   |   |   |   |   |
+8   |   |   |   |   |   |
+
+Enter command: book,c,e,3
+PNR 7 booked: Confirmed [3, 4, 5]
+
+Enter command: chart
+========== BOOKING SUMMARY ==========
+PNR 1 : A → E | Seats: - | Status: Cancelled
+PNR 2 : A → E | Seats: - | Status: Cancelled
+PNR 3 : A → C | Seats: - | Status: Cancelled
+PNR 4 : C → E | Seats: - | Status: Cancelled
+PNR 5 : A → E | Seats: [1, 2] | Status: Confirmed
+PNR 7 : C → E | Seats: [3, 4, 5] | Status: Confirmed
+=====================================
+
+Seat Chart:
+Seat | A | B | C | D | E
+-----+---+---+---+---+---
+1   | * | * | * | * | * |
+2   | * | * | * | * | * |
+3   |   |   | * | * | * |
+4   |   |   | * | * | * |
+5   |   |   | * | * | * |
+6   |   |   |   |   |   |
+7   |   |   |   |   |   |
+8   |   |   |   |   |   |
+
+Enter command:
